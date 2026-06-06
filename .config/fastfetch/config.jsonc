@@ -1,7 +1,7 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-        "source": "/.config/fastfetch/logo/logo.txt", 
+        "source": "/home/${USER}/.config/fastfetch/logo/logo.txt", 
         "height": 15,
         "width": 10,
         "padding": {
@@ -12,34 +12,49 @@
     "modules": [
         "break",
         {
+            "type": "version",
+            "color": {
+            "keys": ""
+            },
+            "key": "       󱐌 Fastfetch ☄           ",
+            "format": "{2}"
+        },
+        {
             "type": "custom",
             "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
         },
         {
             "type": "host",
-            "key": "󰌢  PC",
+            "key": "╭󰌢 MOBO",
+            "keyColor": "green"
+        },
+        {
+            "type": "tpm",
+            "key": "├󱤓 TPM",
             "keyColor": "green"
         },
         {
             "type": "cpu",
-            "key": "│ ├󰻠 ",
+            "key": "├󰻠 CPU",
             "keyColor": "green"
         },
         {
             "type": "gpu",
-            "key": "│ ├󰍹 ",
-            "keyColor": "green"
+            "key": "├󰍹 GPU",
+            "keyColor": "green",
+            "format": "{name} - {driver}"
         },
         {
             "type": "memory",
-            "key": "│ ├󰑭 ",
+            "key": "├󰑭 RAM",
             "keyColor": "green"
         },
         {
             "type": "disk",
-            "key": "└ └󰋊 ",
+            "key": "╰󰋊 Disk",
             "keyColor": "green"
         },
+        
         {
             "type": "custom",
             "format": "\u001b[90m└────────────────────────────────────────────────────┘"
@@ -51,79 +66,107 @@
         },
         {
             "type": "os",
-            "key": "  OS",
+            "key": "╭ OS",
             "keyColor": "yellow"
         },
         {
             "type": "kernel",
-            "key": "│ ├󰌽 ",
+            "key": "├ Kernel",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "InitSystem",
+            "key": "├ ",
             "keyColor": "yellow"
         },
         {
             "type": "bios",
-            "key": "│ ├󰖡 ",
+            "key": "├ Bios",
             "keyColor": "yellow"
         },
         {
             "type": "packages",
-            "key": "│ ├󰏗 ",
+            "key": "├󰏗 ",
             "keyColor": "yellow"
         },
         {
             "type": "shell",
-            "key": "└ └󰞷 ",
+            "key": "├ ",
             "keyColor": "yellow"
         },
-        "break",
         {
             "type": "de",
-            "key": "󰧨  DE",
-            "keyColor": "blue"
+            "key": "├󰧨 ",
+            "keyColor": "#ff9933"
         },
         {
             "type": "lm",
-            "key": "│ ├󰍁 ",
-            "keyColor": "blue"
+            "key": "├󰍁 ",
+            "keyColor": "#df7d19"
         },
         {
             "type": "wm",
-            "key": "│ ├󱂬 ",
-            "keyColor": "blue"
+            "key": "├󱂬 ",
+            "keyColor": "#ffffff"
         },
         {
             "type": "wmtheme",
-            "key": "│ ├󰉦 ",
-            "keyColor": "blue"
+            "key": "├󰉦 ",
+            "keyColor": "#ffcd55"
         },
         {
             "type": "terminal",
-            "key": "└ └󰆍 ",
-            "keyColor": "blue"
+            "key": "╰󰆍 ",
+            "keyColor": "#f6b334"
         },
         {
             "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+            "format": "\u001b[90m└────────────────────────────────────────────────────────┘"
         },
         "break",
         {
             "type": "custom",
-            "format": "\u001b[90m┌────────────────────Uptime / Age / DT────────────────────┐"
+            "format": "\u001b[90m┌──────────────────────Other────────────────────────────┐"
         },
         {
             "type": "command",
-            "key": "  ›  OS Age  ",
-            "keyColor": "magenta",
+            "key": "╭  OS Age",
+            "keyColor": "#ff9933",
             "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
         },
         {
             "type": "uptime",
-            "key": "  ›  Uptime  ",
-            "keyColor": "magenta"
+            "key": "├󰞌 Uptime",
+            "keyColor": "#df7d19"
         },
         {
             "type": "datetime",
-            "key": "  ›  DateTime  ",
-            "keyColor": "magenta"
+            "key": "├ DateTime",
+            "keyColor": "#ffffff"
+        },
+        {
+            "type": "weather",
+            "key": "╰ Weather",
+            "keyColor": "#ffcd55"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m──────────────────────Network─────────────────────────────"
+        },
+        {
+            "type": "dns",
+            "key": "╭󰇖 DNS",
+            "keyColor": "#f6b334"
+        },
+        {
+            "type": "localip",
+            "key": "├󰌚 Local IP",
+            "keyColor": "#ff9933"
+        },
+        {
+            "type": "publicip",
+            "key": "╰󰩠 Public IP",
+            "keyColor": "#df7d19"
         },
         {
             "type": "custom",
@@ -133,6 +176,9 @@
             "type": "colors",
             "paddingLeft": 2,
             "symbol": "circle"
+        },
+        {
+            "type": "Colors"
         }
     ]
 }

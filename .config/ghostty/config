@@ -1,0 +1,12 @@
+# Set size in pixels instead of cells
+# window-width = 1200px
+# window-height = 800px
+
+# Start maximized or fullscreen
+# window-decoration = true
+# fullscreen = true
+# maximize = true
+
+theme = gotham-default
+window-height = 34
+window-width = 122
