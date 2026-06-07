@@ -7,15 +7,16 @@
 clear
 
 SRC="/home/$USER/Downloads/dotfiles/.config/"
-PTH="/home/$USER/.config/"
+DEST="/home/$USER/.config/"
 
 echo "Copying files from:"
 echo "╰📁━$SRC"
 echo "to:"
-echo "╰📁━$PTH"
+echo "╰📁━$DEST"
 echo ""
 
-cp -r "$SRC" "$PTH"
+cp -r "$SRC"* "$DEST" 2>/dev/null
+cp -r "$SRC".* "$DEST" 2>/dev/null
 
 for i in {3..1}; do 
     echo -ne "Files copying: $i seconds\r"
@@ -28,7 +29,7 @@ sleep 2
 echo "Done! .config files was copied!"
 echo ""
 echo "From: $SRC"
-echo "To: $PTH"
+echo "To: $DEST"
 sleep 4
 
 # ─────────────────────────────────────────
@@ -38,16 +39,16 @@ sleep 4
 clear
 
 SRC="/home/$USER/Downloads/dotfiles/home/"
-PTH="/home/$USER/"
+DEST="/home/$USER/"
 
 echo "Copying files from:"
 echo "╰📁━$SRC"
 echo "to:"
-echo "╰📁━$PTH"
+echo "╰📁━$DEST"
 echo ""
 
-cp -r "$SRC"* "$PTH" 2>/dev/null
-cp -r "$SRC".* "$PTH" 2>/dev/null
+cp -r "$SRC"* "$DEST" 2>/dev/null
+cp -r "$SRC".* "$DEST" 2>/dev/null
 
 for i in {3..1}; do 
     echo -ne "Files copying: $i seconds\r"
@@ -61,5 +62,5 @@ echo "Done! .dot files was copied!"
 sleep 2
 echo ""
 echo "From: $SRC"
-echo "To: $PTH"
+echo "To: $DEST"
 sleep 4
