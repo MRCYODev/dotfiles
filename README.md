@@ -1,1 +1,3 @@
 # dotfiles
+
+- [ ] fastfetch customization.

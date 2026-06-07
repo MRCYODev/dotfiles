@@ -10,9 +10,9 @@ SRC="/home/$USER/Downloads/dotfiles/.config/"
 PTH="/home/$USER/.config/"
 
 echo "Copying files from:"
-echo "  📁 $SRC"
+echo "╰📁━$SRC"
 echo "to:"
-echo "  📁 $PTH"
+echo "╰📁━$PTH"
 echo ""
 
 cp -r "$SRC" "$PTH"
@@ -41,15 +41,13 @@ SRC="/home/$USER/Downloads/dotfiles/home/"
 PTH="/home/$USER/"
 
 echo "Copying files from:"
-echo "  📁 $SRC"
+echo "╰📁━$SRC"
 echo "to:"
-echo "  📁 $PTH"
+echo "╰📁━$PTH"
 echo ""
 
-sleep 3
-
-cp -r "$SRC"* "$DEST" 2>/dev/null
-cp -r "$SRC".* "$DEST" 2>/dev/null
+cp -r "$SRC"* "$PTH" 2>/dev/null
+cp -r "$SRC".* "$PTH" 2>/dev/null
 
 for i in {3..1}; do 
     echo -ne "Files copying: $i seconds\r"

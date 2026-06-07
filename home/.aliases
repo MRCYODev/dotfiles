@@ -1,0 +1,4 @@
+# Custom Aliases
+alias ff="fastfetch"
+alias clr="clear"
+alias ll="ls -la"
